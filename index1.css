@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #061c2c;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+/* =========================
+   MENU
+========================= */
+
+.menu {
+    min-height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+}
+
+.logo {
+    width: 60px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+/* MENU DE NAVEGAÇÃO */
+
+nav {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: #dce4ef;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    background: linear-gradient(135deg, #203d5b, #172f49);
+    padding: 6px 20px 8px;
+    border-radius: 30px;
+    border-bottom: 4px solid #3686ee;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: #294c70;
+    transform: translateY(-2px);
+}
+
+nav .ativo {
+    color: white;
+}
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+main {
+    padding: 20px;
+}
+
+.boas-vindas {
+    margin-bottom: 20px;
+}
+
+.boas-vindas h1 {
+    color: #8ca7ce;
+    font-size: clamp(32px, 5vw, 48px); /* Responsivo automático */
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 15px;
+}
+
+.boas-vindas p {
+    color: #829abd;
+    font-size: clamp(16px, 2.5vw, 21px);
+    line-height: 1.4;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adaptação automática sem quebrar */
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.card {
+    min-height: 350px;
+    background: #15415d;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* LINHAS DECORATIVAS */
+
+.linha {
+    position: absolute;
+    height: 1px;
+    background: #d9e5ef;
+}
+
+.linha-top {
+    width: 88%;
+    top: 45px;
+    left: 15px;
+}
+
+.linha-top::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 12px;
+    background: #d9e5ef;
+    left: 0;
+    top: 0;
+}
+
+.linha-bottom {
+    width: 88%;
+    bottom: 45px;
+    left: 15px;
+}
+
+.linha-bottom::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 12px;
+    background: #d9e5ef;
+    right: 0;
+    bottom: 0;
+}
+
+/* CONTEÚDO DO CARD */
+
+.conteudo {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.conteudo h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.conteudo h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.conteudo p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Substituído o uso de !important */
+.conteudo .destaque {
+    font-size: 20px;
+}
+
+.conteudo .informacao {
+    font-size: 20px;
+    margin-top: 25px;
+}
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 30px 20px;
+    color: #88a8d2;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    gap: 20px;
+}
+
+.endereco {
+    max-width: 65%;
+}
+
+.contato {
+    text-align: right;
+}
+
+footer strong {
+    font-weight: 800;
+}
+
+/* =========================
+   RESPONSIVIDADE (Mobile Ajustes)
+========================= */
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 8px;
+    }
+
+    nav a {
+        font-size: 15px;
+        padding: 5px 14px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .endereco {
+        max-width: 100%;
+    }
+
+    .contato {
+        text-align: left;
+    }
+}

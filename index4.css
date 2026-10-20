@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-image:
+        linear-gradient(
+            rgba(3, 25, 55, 0.35),
+            rgba(3, 25, 55, 0.35)
+        ),
+        url("cidade.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+.menu {
+    width: 100%;
+    height: 65px;
+
+    background: #000;
+
+    display: flex;
+    align-items: center;
+
+    padding: 5px 25px;
+
+    gap: 25px;
+}
+
+
+/* BOTÃO VOLTAR */
+
+.voltar {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+    border: 2px solid #5caaff;
+
+    background: linear-gradient(
+        #dcecff,
+        #78a9e8
+    );
+
+    color: white;
+
+    font-size: 35px;
+
+    cursor: pointer;
+
+    text-shadow: 1px 1px 3px #333;
+}
+
+
+/* LINKS */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    flex: 1;
+
+    gap: 15px;
+}
+
+nav a {
+    min-width: 150px;
+
+    padding: 7px 25px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    color: #dce8fa;
+
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+
+    border-radius: 25px;
+
+    background: linear-gradient(
+        #152c4d,
+        #14233d
+    );
+
+    border-bottom: 4px solid #2783ff;
+
+    box-shadow:
+        inset 0 0 8px rgba(100, 170, 255, 0.2);
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: #244a78;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+main {
+    min-height: calc(100vh - 65px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+/* LOGO */
+
+.logo {
+    margin-top: 80px;
+
+    text-align: center;
+}
+
+.logo h1 {
+    font-size: 65px;
+
+    letter-spacing: 12px;
+
+    font-weight: 300;
+
+    text-shadow:
+        0 0 10px rgba(255,255,255,0.4);
+}
+
+.logo h1 span {
+    color: #20c9ff;
+
+    letter-spacing: 2px;
+}
+
+.logo p {
+    margin-top: 15px;
+
+    font-size: 16px;
+
+    letter-spacing: 7px;
+
+    color: #8fa8c8;
+}
+
+
+/* =========================
+   CAIXA
+========================= */
+
+.localizacao {
+    width: 515px;
+
+    margin-top: 40px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    border-radius: 15px;
+
+    background: rgba(10, 31, 60, 0.82);
+
+    border: 1px solid rgba(70, 160, 255, 0.2);
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.35),
+        inset 0 0 15px rgba(60, 150, 255, 0.08);
+
+    backdrop-filter: blur(5px);
+}
+
+.localizacao h2 {
+    font-size: 21px;
+
+    margin-bottom: 10px;
+}
+
+.localizacao h2 span {
+    color: #12c8ff;
+}
+
+.localizacao p {
+    font-size: 13px;
+
+    line-height: 18px;
+
+    color: #9caeca;
+
+    margin-bottom: 18px;
+}
+
+
+/* CAMPOS */
+
+.campos {
+    display: flex;
+
+    gap: 12px;
+
+    width: 100%;
+}
+
+input,
+select {
+    height: 45px;
+
+    border-radius: 12px;
+
+    border: 1px solid #1b4e89;
+
+    background: rgba(5, 28, 65, 0.85);
+
+    color: white;
+
+    padding: 0 15px;
+
+    outline: none;
+
+    font-size: 13px;
+}
+
+input {
+    flex: 1;
+}
+
+select {
+    width: 150px;
+}
+
+input::placeholder {
+    color: #8495b0;
+}
+
+select {
+    color: #8495b0;
+}
+
+
+/* BOTÃO ENTRAR */
+
+.entrar {
+    width: 100%;
+
+    height: 43px;
+
+    margin-top: 15px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background: linear-gradient(
+        90deg,
+        #238bff,
+        #258cff
+    );
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 15px rgba(0, 140, 255, 0.35);
+
+    transition: 0.3s;
+}
+
+.entrar:hover {
+    transform: scale(1.02);
+
+    box-shadow:
+        0 0 25px rgba(0, 150, 255, 0.6);
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    position: fixed;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    min-height: 55px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    padding: 0 10px 5px;
+
+    color: #9bc7f5;
+
+    font-size: 14px;
+
+    text-shadow:
+        1px 1px 3px #000;
+}
+
+footer strong {
+    color: #a9d7ff;
+}
+
+.endereco {
+    max-width: 65%;
+}
+
+.contato {
+    text-align: right;
+}

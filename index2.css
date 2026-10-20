@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(circle at 90% 20%, #123d5b 0%, transparent 35%),
+        linear-gradient(135deg, #031827, #061e31);
+
+    color: #9fc8ef;
+
+    min-height: 100vh;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+header {
+    width: 100%;
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 25px;
+
+    gap: 20px;
+}
+
+.logo {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 35px;
+
+    color: #61aaff;
+}
+
+nav {
+    display: flex;
+    gap: 18px;
+
+    flex: 1;
+}
+
+nav a {
+    text-decoration: none;
+
+    color: #c5d7eb;
+
+    font-size: 25px;
+    font-weight: bold;
+
+    padding: 8px 32px;
+
+    border-radius: 30px;
+
+    background: linear-gradient(
+        180deg,
+        #193957,
+        #102b45
+    );
+
+    border-bottom: 4px solid #338cff;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.ativo {
+    color: white;
+
+    background: linear-gradient(
+        180deg,
+        #245176,
+        #163b5b
+    );
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+main {
+    padding: 25px 35px 30px;
+}
+
+
+/* TÍTULO */
+
+.titulo {
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+
+    margin-bottom: 25px;
+}
+
+.icone {
+    font-size: 75px;
+
+    filter: grayscale(20%);
+
+    color: #63a9ec;
+}
+
+.titulo h1 {
+    font-size: 40px;
+    line-height: 0.95;
+
+    color: #7da9db;
+
+    letter-spacing: 1px;
+}
+
+.titulo p {
+    margin-top: 15px;
+
+    font-size: 22px;
+
+    color: #7596b8;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.restaurantes {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 45px;
+
+    padding: 0 10px;
+}
+
+.card {
+    min-height: 420px;
+
+    text-align: center;
+
+    background: linear-gradient(
+        145deg,
+        #15405c,
+        #103650
+    );
+
+    border-radius: 30px;
+
+    padding: 0 20px 20px;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.25);
+
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 12px 25px rgba(0, 0, 0, 0.35);
+}
+
+
+/* IMAGEM */
+
+.card img {
+    width: 100%;
+    height: 185px;
+
+    object-fit: cover;
+
+    display: block;
+
+    margin-bottom: 7px;
+}
+
+
+/* NOME */
+
+.card h2 {
+    color: #72b9f6;
+
+    font-size: 28px;
+
+    font-style: italic;
+
+    margin-bottom: 5px;
+}
+
+
+/* AVALIAÇÃO */
+
+.avaliacao {
+    font-size: 28px;
+
+    color: #ffe000;
+
+    margin-bottom: 8px;
+}
+
+.avaliacao strong {
+    color: #72b9f6;
+}
+
+
+/* INFORMAÇÕES */
+
+.card p {
+    font-size: 22px;
+
+    color: #a5c9e8;
+
+    margin: 9px 0;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    width: 100%;
+
+    min-height: 60px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 10px 25px;
+
+    color: #7ea7ce;
+
+    font-size: 15px;
+
+    border-top: 1px solid rgba(90, 160, 220, 0.25);
+}
+
+footer strong {
+    color: #70a9d8;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 1000px) {
+
+    nav a {
+        font-size: 18px;
+        padding: 8px 15px;
+    }
+
+    .restaurantes {
+        gap: 20px;
+    }
+
+    .card h2 {
+        font-size: 22px;
+    }
+
+    .card p {
+        font-size: 18px;
+    }
+}
+
+
+@media (max-width: 750px) {
+
+    header {
+        height: auto;
+
+        flex-direction: column;
+
+        padding: 15px;
+    }
+
+    nav {
+        width: 100%;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    .titulo h1 {
+        font-size: 30px;
+    }
+
+    .titulo p {
+        font-size: 17px;
+    }
+
+    .restaurantes {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+
+        text-align: center;
+    }
+}

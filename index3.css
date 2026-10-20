@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #061c2c;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+.menu {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+
+    background: linear-gradient(
+        90deg,
+        #123b58,
+        #082235
+    );
+
+    border-bottom: 1px solid #1c5279;
+}
+
+.logo {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 34px;
+    margin-right: 20px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    width: 100%;
+    justify-content: center;
+}
+
+nav a {
+    color: #d7e3f3;
+    text-decoration: none;
+
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-weight: bold;
+
+    padding: 7px 35px;
+
+    border-radius: 30px;
+
+    background: rgba(70, 108, 140, 0.45);
+
+    border-bottom: 4px solid #2384e8;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: #285c82;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+main {
+    padding: 40px 30px 20px;
+}
+
+h1 {
+    color: #a9b9ff;
+
+    font-size: 48px;
+    font-weight: 800;
+
+    text-align: left;
+
+    margin-bottom: 25px;
+
+    letter-spacing: 1px;
+}
+
+h1 span {
+    font-size: 45px;
+    margin-right: 15px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.eventos {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 55px;
+
+    max-width: 1220px;
+
+    margin: auto;
+}
+
+.card {
+    background: linear-gradient(
+        145deg,
+        #16486a,
+        #0d3855
+    );
+
+    border-radius: 30px;
+
+    padding: 15px 28px 25px;
+
+    min-height: 470px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 175px;
+
+    object-fit: cover;
+
+    display: block;
+
+    margin-bottom: 8px;
+}
+
+.card h2 {
+    color: #a9d4ff;
+
+    font-size: 27px;
+
+    font-style: italic;
+
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #b9d4ee;
+
+    font-size: 24px;
+
+    line-height: 1.45;
+
+    margin: 5px 0;
+}
+
+.card p span {
+    color: #9ec7eb;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 30px;
+
+    margin-top: 20px;
+
+    padding: 0 0 5px;
+
+    color: #8db4d5;
+
+    font-size: 16px;
+
+    font-weight: bold;
+}
+
+.endereco {
+    flex: 1;
+}
+
+.contato {
+    text-align: left;
+
+    min-width: 330px;
+}
+
+footer strong {
+    color: #8bb4d7;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .menu {
+        height: auto;
+        padding: 15px;
+        flex-direction: column;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 20px;
+        padding: 6px 18px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .eventos {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        max-width: 600px;
+        width: 100%;
+        margin: auto;
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .contato {
+        min-width: auto;
+    }
+}
